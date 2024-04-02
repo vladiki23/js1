@@ -1,15 +1,20 @@
+var countries= [];
+var lastIndex = 0;
 fetch("https://restcountries.com/v3.1/all")
     .then((res) => res.json())
     .then(function (countries) {
         console.log(countries);
+        this.countries=countries;
+        clik();
+    });
+    function clik() {
         const maxElements = 20;
 
-        var lastIndex = 0;
         var countriesHtml = "";
         var counter=0;
 
-        for (var index=lastIndex; index<Object.keys(countries).length;index++) {
-            var element = countries[index];
+        for (var index=this.lastIndex; index<Object.keys(this.countries).length;index++) {
+            var element = this.countries[index];
             const flagUrl = element.flags?.svg;
             countriesHtml += `<tr>
           <td>${+index + 1}</td>
@@ -21,11 +26,13 @@ fetch("https://restcountries.com/v3.1/all")
       </td>
       
         </tr>`;
-            lastIndex=index;
-            if(maxelements==index) {
-                maxelements*2=maxelements continue;
+            this.lastIndex=index;
+            counter++;
+            if(maxElements==counter) {
+                this.lastIndex++;
+                counter=0;
+                document.querySelector("#countries-table tbody").innerHTML+=countriesHtml;
+                return;
             }
         }
-        console.log(Object.keys(countries).length)
-        document.querySelector("#countries-table tbody").innerHTML = countriesHtml;
-    });
+    }
