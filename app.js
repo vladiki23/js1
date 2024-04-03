@@ -22,8 +22,7 @@ fetch("https://restcountries.com/v3.1/all")
           <td>${element.population}</td>
           <td>${element.region}</td>
           <td>${element.area}</td>
-          <td style="background-image: url(${flagUrl}); background-size: 70px 50px; background-position: center; background-repeat: no-repeat;">
-      </td>
+          <td style="background-image: url(${flagUrl}); background-size: 70px 50px; background-position: center; background-repeat: no-repeat;"></td>
       
         </tr>`;
             this.lastIndex=index;
