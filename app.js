@@ -5,9 +5,9 @@ fetch("https://restcountries.com/v3.1/all")
     .then(function (countries) {
         console.log(countries);
         this.countries=countries;
-        click();
+        clik();
     });
-    function click() {
+    function clik() {
         const maxElements = 20;
 
         var countriesHtml = "";
