@@ -23,6 +23,6 @@
 </ul>
 <h2>Демонстрация</h2>
 <h3>Cсылки на проект, скриншоты интерфейса.</h3>
-<a href="https://vladiki23.github.io/js1/"><---- Ссылка ----></a>
+<a href="https://vladiki23.github.io/js1/" target="_blank"><---- Ссылка ----></a>
 <img src="./img/1.png" alt="1">
 <img src="./img/2.png" alt="2">
